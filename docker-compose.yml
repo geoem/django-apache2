@@ -1,0 +1,12 @@
+version: "2"
+
+services: 
+  django-apache2:
+    image: django-apache2
+    build: .
+    container_name: django-apache2
+    ports:
+      - '80:80'
+    volumes:
+      - ./mysite:/var/www/html
+      
